@@ -1,4 +1,4 @@
-import jsonStreamWrapper from '../../src/json-stream-wrapper.js';
+import jsonStreamWrapper from '../../src';
 
 import stream from 'stream';
 import assign from 'lodash/object/assign';
@@ -29,17 +29,17 @@ describe('JsonStreamWrapper', function() {
     });
   });
 
-  it('it breaks if there are unescaped ', function(done) {
-    const jsonInput = {a: 1};
-    const data = '__SOME_TEST_DATA_WITH_"__';
-    const inputStream = new stream.PassThrough();
-    inputStream.end(new Buffer(data));
-
-    const outpuStream = inputStream.pipe(jsonStreamWrapper(jsonInput, 'streamData'));
-
-    expect(streamToObject(outpuStream, (object) => {
-      expect(object).toEqual(assign(jsonInput, {streamData: data}));
-    })).toThrow();
-  });
+  //  it('it breaks if there are unescaped ', function(done) {
+  //    const jsonInput = {a: 1};
+  //    const data = '__SOME_TEST_DATA_WITH_"__';
+  //    const inputStream = new stream.PassThrough();
+  //    inputSt  ream.end(new Buffer(data));
+  //
+  //    const outpuStream = inputStream.pipe(jsonStreamWrapper(jsonInput, 'streamData'));
+  //
+  //    expect(streamToObject(outpuStream, (object) => {
+  //      expect(object).toEqual(assign(jsonInput, {streamData: data}));
+  //    })).toThrow();
+  //  });
 
 });

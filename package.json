@@ -1,16 +1,17 @@
 {
   "name": "node-json-stream-wrapper",
-  "version": "0.0.0",
-  "description": "A stream wrapper which wraps a stream into a JSON objects.",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "A stream wrapper which wraps a stream into a JSON object",
+  "main": "dist/index.js",
   "scripts": {
     "test": "npm run test:lint && npm run test:unit",
     "test:unit": "mocha -x --reporter dot --recursive -r setup-referee-sinon/globals test/unit --compilers js:babel/register",
     "test:lint": "eslint src test",
-    "test:coverage": "istanbul cover _mocha -x -- --compilers js:babel/register --reporter dot --recursive -r setup-referee-sinon/globals test/unit"
+    "test:coverage": "istanbul cover _mocha -x -- --compilers js:babel/register --reporter dot --recursive -r setup-referee-sinon/globals test/unit",
+    "build": "rimraf dist && mkdir dist && babel src/*.js -o dist/index.js"
   },
   "contributors": [
-    "Jonathan Häberle <>",
+    "Jonathan Häberle <jonathan.haeberle@gmail.com>",
     "Christian Ranz <cr@codastic.com>"
   ],
   "repository": {
@@ -27,8 +28,10 @@
     "mocha": "^2.2.5",
     "referee": "^1.1.1",
     "referee-sinon": "^1.0.2",
+    "rimraf": "^2.4.3",
     "setup-referee-sinon": "^0.3.0",
     "sinon": "^1.15.3",
-    "watch": "^0.16.0"
+    "watch": "^0.16.0",
+    "lodash": "^3.10.1"
   }
 }
