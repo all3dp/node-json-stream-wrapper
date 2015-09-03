@@ -1,0 +1,34 @@
+{
+  "name": "node-json-stream-wrapper",
+  "version": "0.0.0",
+  "description": "A stream wrapper which wraps a stream into a JSON objects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:lint && npm run test:unit",
+    "test:unit": "mocha -x --reporter dot --recursive -r setup-referee-sinon/globals test/unit --compilers js:babel/register",
+    "test:lint": "eslint src test",
+    "test:coverage": "istanbul cover _mocha -x -- --compilers js:babel/register --reporter dot --recursive -r setup-referee-sinon/globals test/unit"
+  },
+  "contributors": [
+    "Jonathan Häberle <>",
+    "Christian Ranz <cr@codastic.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:all3dp/node-json-stream-wrapper.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.6.14",
+    "babel-core": "^5.6.18",
+    "eslint": "^0.24.1",
+    "istanbul": "^0.3.16",
+    "mocha": "^2.2.5",
+    "referee": "^1.1.1",
+    "referee-sinon": "^1.0.2",
+    "setup-referee-sinon": "^0.3.0",
+    "sinon": "^1.15.3",
+    "watch": "^0.16.0"
+  }
+}
