@@ -1,6 +1,6 @@
 {
   "name": "json-stream-wrapper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A stream wrapper which wraps a stream into a JSON object",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "test:unit": "mocha -x --reporter dot --recursive -r setup-referee-sinon/globals test/unit --compilers js:babel/register",
     "test:lint": "eslint src test",
     "test:coverage": "istanbul cover _mocha -x -- --compilers js:babel/register --reporter dot --recursive -r setup-referee-sinon/globals test/unit",
-    "build": "rimraf dist && mkdir dist && babel src/*.js -o dist/index.js"
+    "build": "rimraf dist && mkdir dist && babel src/*.js -o dist/index.js",
+    "postinstall": "npm run build"
   },
   "contributors": [
     "Jonathan Häberle <jonathan.haeberle@gmail.com>",
