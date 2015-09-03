@@ -1,6 +1,8 @@
 # node-json-stream-wrapper
 A stream wrapper which wraps a stream into a JSON object
 
+[![Build Status](https://travis-ci.org/all3dp/node-json-stream-wrapper.svg)](https://travis-ci.org/all3dp/node-json-stream-wrapper)
+
 # Example Usage
 
 ```javascript
