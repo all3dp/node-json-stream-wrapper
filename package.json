@@ -1,5 +1,5 @@
 {
-  "name": "node-json-stream-wrapper",
+  "name": "json-stream-wrapper",
   "version": "0.0.1",
   "description": "A stream wrapper which wraps a stream into a JSON object",
   "main": "dist/index.js",
