@@ -22,17 +22,17 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "babel": "^5.6.14",
-    "babel-core": "^5.6.18",
-    "eslint": "^0.24.1",
-    "istanbul": "^0.3.16",
-    "mocha": "^2.2.5",
+    "babel": "^6.5.2",
+    "babel-core": "^6.18.2",
+    "eslint": "^3.11.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
     "referee": "^1.1.1",
     "referee-sinon": "^1.0.2",
     "rimraf": "^2.4.3",
     "setup-referee-sinon": "^0.3.0",
     "sinon": "^1.15.3",
-    "watch": "^0.16.0",
-    "lodash": "^3.10.1"
+    "watch": "^1.0.1",
+    "lodash": "^4.17.2"
   }
 }
