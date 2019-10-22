@@ -7,7 +7,7 @@
     "test": "npm run test:lint && npm run test:unit",
     "test:unit": "mocha --config test/.mocharc.yml",
     "test:lint": "eslint src test",
-    "test:coverage": "istanbul cover _mocha --config test/.mocharc.yml",
+    "test:coverage": "nyc --reporter=lcovonly --reporter=text --require @babel/register mocha --config test/.mocharc.yml ./test/unit",
     "build": "rimraf dist && mkdir dist && babel -d dist/ src/",
     "prepublish": "npm run test && npm run build"
   },
@@ -29,9 +29,9 @@
     "@babel/register": "^7.6.2",
     "@sinonjs/referee": "^3.2.0",
     "eslint": "6.5.1",
-    "istanbul": "0.4.5",
     "lodash": "4.17.15",
     "mocha": "6.2.2",
+    "nyc": "^14.1.1",
     "rimraf": "3.0.0",
     "sinon": "7.5.0"
   }
