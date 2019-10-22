@@ -9,7 +9,7 @@
     "test:lint": "eslint src test",
     "test:coverage": "nyc --reporter=lcovonly --reporter=text --require @babel/register mocha --config test/.mocharc.yml ./test/unit",
     "build": "rimraf dist && mkdir dist && babel -d dist/ src/",
-    "prepublish": "npm run test && npm run build"
+    "prepare": "npm run test && npm run build"
   },
   "contributors": [
     "Jonathan Häberle <jonathan.haeberle@gmail.com>",
