@@ -22,7 +22,7 @@ describe('JsonStreamWrapper', function() {
     const jsonInput = {a: 1};
     const data = '__SOME_TEST_DATA__';
     const inputStream = new stream.PassThrough();
-    inputStream.end(new Buffer(data));
+    inputStream.end(Buffer.from(data));
 
     const outputStream = inputStream.pipe(jsonStreamWrapper(jsonInput, 'streamData'));
 
