@@ -1,7 +1,10 @@
 import jsonStreamWrapper from '../../src';
 
 import stream from 'stream';
-import assign from 'lodash/object/assign';
+import assign from 'lodash/fp/assign';
+import * as referee from '@sinonjs/referee'
+
+const expect = referee.expect
 
 describe('JsonStreamWrapper', function() {
 
@@ -15,15 +18,15 @@ describe('JsonStreamWrapper', function() {
     });
   }
 
-  it('insert stream data in right json attribute', function(done) {
+  it('should insert stream data in right json attribute', function(done) {
     const jsonInput = {a: 1};
     const data = '__SOME_TEST_DATA__';
     const inputStream = new stream.PassThrough();
     inputStream.end(new Buffer(data));
 
-    const outpuStream = inputStream.pipe(jsonStreamWrapper(jsonInput, 'streamData'));
+    const outputStream = inputStream.pipe(jsonStreamWrapper(jsonInput, 'streamData'));
 
-    streamToObject(outpuStream, (object) => {
+    streamToObject(outputStream, (object) => {
       expect(object).toEqual(assign(jsonInput, {streamData: data}));
       done();
     });

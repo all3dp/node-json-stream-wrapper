@@ -1,6 +1,8 @@
 import {Base64Stream} from '../../src';
-
+import * as referee from '@sinonjs/referee'
 import stream from 'stream';
+
+const expect = referee.expect
 
 describe('Base64Stream', function() {
 
@@ -14,7 +16,7 @@ describe('Base64Stream', function() {
     });
   }
 
-  it('working base64 encoder', (done) => {
+  it('should implement working base64 encoder', (done) => {
     const data = 'Test';
     const inputStream = new stream.PassThrough();
     inputStream.end(new Buffer(data));
