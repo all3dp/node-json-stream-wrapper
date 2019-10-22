@@ -33,6 +33,6 @@
     "setup-referee-sinon": "^0.3.0",
     "sinon": "^1.15.3",
     "watch": "^0.16.0",
-    "lodash": "^3.10.1"
+    "lodash": "^4.17.15"
   }
 }
