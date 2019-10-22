@@ -4,7 +4,7 @@
   "description": "A stream wrapper which wraps a stream into a JSON object",
   "main": "dist/index.js",
   "scripts": {
-    "test": "npm run test:lint && npm run test:unit",
+    "test": "npm run test:lint && npm run test:unit && npm run test:coverage",
     "test:unit": "mocha --config test/.mocharc.yml",
     "test:lint": "eslint src test",
     "test:coverage": "nyc --reporter=lcovonly --reporter=text --require @babel/register mocha --config test/.mocharc.yml ./test/unit",
