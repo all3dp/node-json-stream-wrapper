@@ -1,6 +1,6 @@
 {
   "name": "json-stream-wrapper",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "A stream wrapper which wraps a stream into a JSON object",
   "main": "dist/index.js",
   "scripts": {
